@@ -15,27 +15,37 @@
 
 <body>
 
-    <header>
+    <header class="header">
 
-        <div class="logo">
+        <div class="header__brand">
 
-            <h1>GWS</h1>
+            <h1 class="header__title">GWS</h1>
 
-            <p>Gurubel Web Solutions</p>
+            <p class="header__tagline">Gurubel Web Solutions</p>
 
         </div>
 
-        <nav>
+        <button class="header__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
 
-            <ul>
+            <span class="header__toggle-bar"></span>
 
-                <li><a href="#">Inicio</a></li>
+            <span class="header__toggle-bar"></span>
 
-                <li><a href="#">Servicios</a></li>
+            <span class="header__toggle-bar"></span>
 
-                <li><a href="#">Proyectos</a></li>
+        </button>
 
-                <li><a href="#">Contacto</a></li>
+        <nav class="header__nav" id="main-nav">
+
+            <ul class="header__menu">
+
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Inicio</a></li>
+
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Servicios</a></li>
+
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Proyectos</a></li>
+
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Contacto</a></li>
 
             </ul>
 
@@ -73,6 +83,9 @@
     </section>
 
 </main>
+
+    <script src="js/menu.js"></script>
+
 </body>
 
 </html>
