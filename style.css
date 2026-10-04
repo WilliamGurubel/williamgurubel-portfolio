@@ -1,0 +1,938 @@
+/* =========================================
+   GWS — GURUBEL WEB SOLUTIONS
+   SISTEMA BASE
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F8F7F3;
+    color: #103B4A;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PALETA
+   =========================================
+
+   Azul petróleo: #103B4A
+   Verde azulado: #2AA198
+   Fondo:          #F8F7F3
+   Gris texto:     #666666
+   Gris secundario:#6B7280
+   Blanco:         #FFFFFF
+
+   ========================================= */
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+
+    background: #FFFFFF;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo h1 {
+    color: #0F3B4C;
+    font-size: 34px;
+    line-height: 1;
+}
+
+.logo p {
+    color: #6B7280;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+
+    color: #0F3B4C;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2AA198;
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #2AA198;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: #F8F7F3;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.subtitle {
+    color: #2AA198;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: #103B4A;
+
+    font-size: 56px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 720px;
+
+    color: #666666;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+
+    padding: 18px 36px;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background: #103B4A;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #2AA198;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(16, 59, 74, 0.18);
+}
+
+.btn-secondary {
+    border: 2px solid #103B4A;
+
+    color: #103B4A;
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    background: #103B4A;
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SECCIONES GENERALES
+   ========================================= */
+
+.section {
+    padding: 110px 8%;
+
+    background: #F8F7F3;
+}
+
+.section-content {
+    max-width: 1120px;
+
+    margin: 0 auto;
+}
+
+.section h2 {
+    max-width: 800px;
+
+    color: #103B4A;
+
+    font-size: 42px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.section-description {
+    max-width: 760px;
+
+    color: #666666;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================================
+   SERVICIOS / SOLUCIONES
+   ========================================= */
+
+/*
+   Esta sección empieza a representar la nueva
+   visión de GWS:
+
+   No solamente "servicios de programación",
+   sino soluciones que pueden conectar
+   diferentes especialidades con necesidades
+   de clientes.
+*/
+
+.services-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    position: relative;
+
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 35px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E6E5E0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Línea de identidad de GWS */
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #2AA198;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #D5E5E3;
+
+    box-shadow: 0 15px 35px rgba(16, 59, 74, 0.09);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card h3 {
+    color: #103B4A;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666666;
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   PROYECTOS / PRODUCTOS
+   ========================================= */
+
+/*
+   Aquí GWS empieza a abrirse más allá
+   del desarrollo web.
+
+   Los proyectos pueden representar:
+   - productos propios
+   - proyectos de clientes
+   - soluciones de terceros
+   - colaboraciones
+*/
+
+.projects-section {
+    background: #FFFFFF;
+}
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 360px;
+
+    padding: 35px;
+
+    background: #F8F7F3;
+
+    border: 1px solid #E6E5E0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.project-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -50px;
+    bottom: -50px;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: rgba(42, 161, 152, 0.08);
+
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    background: #FFFFFF;
+
+    box-shadow: 0 15px 35px rgba(16, 59, 74, 0.10);
+}
+
+.project-card:hover::after {
+    transform: scale(1.5);
+}
+
+.project-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.project-category {
+    color: #2AA198;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #103B4A;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #666666;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.project-link {
+    margin-top: auto;
+
+    color: #103B4A;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #2AA198;
+}
+
+/* =========================================
+   PRODUCTOS Y SERVICIOS
+   ========================================= */
+
+.products-section {
+    background: #F8F7F3;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+
+    background: #DDE3E1;
+    border: 1px solid #DDE3E1;
+}
+
+.product-item {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    background: #FFFFFF;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-item:hover {
+    background: #F1F8F7;
+    transform: translateY(-3px);
+}
+
+.product-number {
+    color: #2AA198;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.product-item h3 {
+    color: #103B4A;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.product-item p {
+    color: #666666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PRODUCTOS — RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================
+   CASE STUDY
+   ========================================= */
+
+.case-study-section {
+    padding: 110px 8%;
+
+    background: #103B4A;
+}
+
+.case-study-section .section-content {
+    max-width: 1120px;
+
+    margin: 0 auto;
+}
+
+.case-study-section .subtitle {
+    color: #2AA198;
+}
+
+.case-study-section h2 {
+    max-width: 800px;
+
+    color: #FFFFFF;
+
+    font-size: 42px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.case-study-section .section-description {
+    color: #D7E1E3;
+}
+
+
+/* =========================================
+   BLOQUES DEL CASO DE USO
+   ========================================= */
+
+.case-study-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.case-study-block {
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 16px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.case-study-block:hover {
+    background: rgba(255, 255, 255, 0.09);
+
+    transform: translateY(-4px);
+}
+
+.case-study-block h3 {
+    color: #FFFFFF;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.case-study-block p {
+    color: #D7E1E3;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   APRENDIZAJES
+   ========================================= */
+
+.learning-section {
+    margin-top: 70px;
+
+    padding-top: 60px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.learning-section h3 {
+    color: #FFFFFF;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+.learning-section ol {
+    padding-left: 25px;
+}
+
+.learning-section li {
+    color: #D7E1E3;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+    padding-left: 8px;
+}
+
+.learning-section strong {
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   CONTACTO
+   ========================================= */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section h2 {
+    max-width: 700px;
+}
+
+.contact-section .section-description {
+    max-width: 650px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 30px 8%;
+
+    background: #FFFFFF;
+
+    text-align: center;
+
+    border-top: 1px solid #E8E7E2;
+}
+
+footer p {
+    color: #6B7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .hero h2 {
+        font-size: 46px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 100px 8%;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+
+    /* BOTONES */
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        text-align: center;
+    }
+
+
+    /* SECCIONES */
+
+    .section {
+        padding: 80px 8%;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+
+
+    /* SERVICIOS */
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PROYECTOS */
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 320px;
+    }
+/* =========================================
+   PRODUCTOS Y SERVICIOS
+   ========================================= */
+
+.products-section {
+    background: #F8F7F3;
+}
+
+.products-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: #DDE3E1;
+
+    border: 1px solid #DDE3E1;
+}
+
+.product-item {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    background: #FFFFFF;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-item:hover {
+    background: #F1F8F7;
+
+    transform: translateY(-3px);
+}
+
+.product-number {
+    color: #2AA198;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.product-item h3 {
+    color: #103B4A;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.product-item p {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PRODUCTOS — RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+    /* CASE STUDY */
+
+    .case-study-section {
+        padding: 80px 8%;
+    }
+
+    .case-study-section h2 {
+        font-size: 34px;
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
