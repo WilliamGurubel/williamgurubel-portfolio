@@ -1,394 +1,289 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Gurubel Web Solutions: desarrollo web, diseño UX/UI, visualización de datos y automatización digital."
+    >
 
     <title>GWS | Gurubel Web Solutions</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="site-header">
+        <div class="container header-content">
 
-    <header>
+            <a href="index.html" class="brand" aria-label="GWS Inicio">
+                <span class="brand-mark">G.</span>
+                <span class="brand-name">
+                    <strong>GWS</strong>
+                    <small>Gurubel Web Solutions</small>
+                </span>
+            </a>
 
-        <div class="logo">
-
-            <h1>GWS</h1>
-
-            <p>Gurubel Web Solutions</p>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="servicios/index.html">Servicios</a>
+                <a href="proyectos/index.html">Proyectos</a>
+                <a href="comunidad/index.html">Comunidad</a>
+                <a href="contacto/index.html">Contacto</a>
+            </nav>
 
         </div>
-
-        <nav>
-
-            <ul>
-
-                <li><a href="#inicio">Inicio</a></li>
-
-                <li><a href="#servicios">Servicios</a></li>
-
-                <li><a href="#proyectos">Proyectos</a></li>
-                
-                <li><a href="#productos">Productos</a></li>
-
-                <li><a href="#contacto">Contacto</a></li>
-
-            </ul>
-
-        </nav>
-
     </header>
 
 
+    <!-- HERO: COLLAGE CORPORATIVO + MENSAJE PRINCIPAL -->
     <main>
 
-        <!-- INICIO -->
+        <section class="hero">
+            <div class="container hero-content">
 
-        <section class="hero" id="inicio">
+                <!-- COLLAGE DE IMÁGENES A LA IZQUIERDA -->
+                <div class="hero-visual">
+                    <div class="corporate-gallery">
 
-            <div class="hero-content">
+                        <!-- Imagen principal -->
+                        <div class="gallery-image gallery-main">
+                            <img
+                                src="assets/img/gws-principal.jpg"
+                                alt="Imagen corporativa principal de GWS"
+                            >
+                        </div>
 
-                <p class="subtitle">
-                    WEB DEVELOPER | UX/UI | DATA VISUALIZATION
-                </p>
+                        <!-- Imagen secundaria -->
+                        <div class="gallery-image gallery-secondary">
+                            <img
+                                src="assets/img/gws-proyecto-1.jpg"
+                                alt="Proyecto digital desarrollado por GWS"
+                            >
+                        </div>
 
-                <h2>
-                    Construyo experiencias digitales que transforman ideas en soluciones.
-                </h2>
+                        <!-- Imagen complementaria -->
+                        <div class="gallery-image gallery-tertiary">
+                            <img
+                                src="assets/img/gws-proyecto-2.jpg"
+                                alt="Experiencia visual de GWS"
+                            >
+                        </div>
 
-                <p class="description">
-                    Desarrollo sitios web modernos, interfaces intuitivas,
-                    dashboards interactivos y automatizaciones con Google Workspace
-                    para ayudar a empresas a optimizar sus procesos.
-                </p>
+                        <!-- Etiqueta flotante -->
+                        <div class="gallery-label">
+                            <span class="gallery-dot"></span>
+                            Soluciones digitales
+                        </div>
 
-                <div class="buttons">
+                    </div>
+                </div>
 
-                    <a href="#proyectos" class="btn-primary">
-                        Ver proyectos
-                    </a>
 
-                    <a href="#contacto" class="btn-secondary">
-                        Contactar
-                    </a>
+                <!-- TEXTO PRINCIPAL A LA DERECHA -->
+                <div class="hero-copy">
+
+                    <p class="eyebrow">
+                        GURUBEL WEB SOLUTIONS
+                    </p>
+
+                    <h1>
+                        Convertimos ideas en
+                        <span>experiencias digitales.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Desarrollo web, diseño de interfaces,
+                        visualización de datos y automatización
+                        para conectar ideas, personas y oportunidades.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="servicios/index.html"
+                            class="btn btn-primary"
+                        >
+                            Conoce los servicios
+                        </a>
+
+                        <a
+                            href="proyectos/index.html"
+                            class="btn btn-secondary"
+                        >
+                            Explora proyectos
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- SERVICIOS -->
+        <!-- SECCIÓN DE SERVICIOS -->
+        <section class="services-section">
+            <div class="container">
 
-        <section id="servicios" class="section">
+                <div class="section-heading">
+                    <p class="eyebrow">QUÉ HACEMOS</p>
 
-            <div class="section-content">
+                    <h2>
+                        Soluciones digitales
+                        <span>con propósito.</span>
+                    </h2>
 
-                <p class="subtitle">SERVICIOS</p>
+                    <p>
+                        Combinamos tecnología, diseño y datos para
+                        transformar necesidades en experiencias útiles.
+                    </p>
+                </div>
 
-                <h2>
-                    Soluciones digitales para hacer crecer tus proyectos.
-                </h2>
 
-                <div class="services-container">
+                <div class="services-grid">
 
-                    <div class="service-card">
+                    <article class="service-card">
+                        <div class="service-icon">01</div>
 
-                        <h3>Desarrollo Web</h3>
+                        <h3>Desarrollo web</h3>
 
                         <p>
-                            Creación de sitios web modernos, funcionales,
-                            responsivos y adaptados a las necesidades de cada proyecto.
+                            Sitios web funcionales, adaptables y
+                            diseñados para comunicar el valor de tu negocio.
                         </p>
 
-                    </div>
+                        <a href="servicios/index.html">
+                            Conocer servicio →
+                        </a>
+                    </article>
 
 
-                    <div class="service-card">
+                    <article class="service-card">
+                        <div class="service-icon">02</div>
 
                         <h3>UX/UI Design</h3>
 
                         <p>
-                            Diseño de interfaces intuitivas y experiencias
-                            digitales enfocadas en las necesidades del usuario.
+                            Interfaces intuitivas que conectan las
+                            necesidades de las personas con los objetivos
+                            de cada proyecto.
                         </p>
 
-                    </div>
+                        <a href="servicios/index.html">
+                            Conocer servicio →
+                        </a>
+                    </article>
 
 
-                    <div class="service-card">
+                    <article class="service-card">
+                        <div class="service-icon">03</div>
 
-                        <h3>Data Visualization</h3>
+                        <h3>Dashboards y datos</h3>
 
                         <p>
-                            Dashboards interactivos y visualización de información
-                            para convertir datos en decisiones.
+                            Visualización de información para facilitar
+                            el análisis, el seguimiento y la toma de decisiones.
                         </p>
 
-                    </div>
+                        <a href="servicios/index.html">
+                            Conocer servicio →
+                        </a>
+                    </article>
 
 
-                    <div class="service-card">
+                    <article class="service-card">
+                        <div class="service-icon">04</div>
 
                         <h3>Automatización</h3>
 
                         <p>
-                            Automatización de procesos utilizando herramientas
-                            como Google Sheets, Apps Script y Google Workspace.
+                            Flujos de trabajo y soluciones con Google
+                            Workspace para reducir tareas repetitivas.
                         </p>
 
-                    </div>
+                        <a href="servicios/index.html">
+                            Conocer servicio →
+                        </a>
+                    </article>
 
                 </div>
 
             </div>
-
-        </section>
-<!-- PRODUCTOS Y SERVICIOS -->
-
-<section id="productos" class="section products-section">
-
-    <div class="section-content">
-
-        <p class="subtitle">PRODUCTOS Y SERVICIOS</p>
-
-        <h2>
-            Soluciones especializadas para diferentes industrias.
-        </h2>
-
-        <p class="section-description">
-            Una selección de productos y servicios digitales desarrollados,
-            integrados o presentados a través de GWS para atender diferentes
-            necesidades y sectores.
-        </p>
-
-        <div class="products-container">
-
-            <article class="product-item">
-
-                <span class="product-number">01</span>
-
-                <div>
-                    <h3>Fotografía</h3>
-
-                    <p>
-                        Fotografía de stock y recursos visuales para proyectos
-                        digitales, comerciales y de comunicación.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <article class="product-item">
-
-                <span class="product-number">02</span>
-
-                <div>
-                    <h3>3D</h3>
-
-                    <p>
-                        Modelado, visualización y recursos tridimensionales
-                        para proyectos creativos y profesionales.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <article class="product-item">
-
-                <span class="product-number">03</span>
-
-                <div>
-                    <h3>Turismo</h3>
-
-                    <p>
-                        Creación de contenido visual, fotografía y video aéreo
-                        para destinos, experiencias y proyectos turísticos.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <article class="product-item">
-
-                <span class="product-number">04</span>
-
-                <div>
-                    <h3>Inmobiliario</h3>
-
-                    <p>
-                        Renders, visualización arquitectónica y paquetes
-                        digitales para presentar proyectos inmobiliarios.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <article class="product-item">
-
-                <span class="product-number">05</span>
-
-                <div>
-                    <h3>Industrial</h3>
-
-                    <p>
-                        Consultoría especializada en presupuestos, costos
-                        y soluciones orientadas a proyectos industriales.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <article class="product-item">
-
-                <span class="product-number">06</span>
-
-                <div>
-                    <h3>Digital</h3>
-
-                    <p>
-                        Sitios web, UX/UI, dashboards, visualización de datos
-                        y automatizaciones para proyectos y negocios.
-                    </p>
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- PROYECTOS -->
-
-        <section id="proyectos" class="section">
-
-            <div class="section-content">
-
-                <p class="subtitle">PROYECTOS</p>
-
-                <h2>
-                    Algunos de mis proyectos.
-                </h2>
-
-                <div class="projects-container">
-
-                    <div class="project-card">
-
-                        <h3>Dashboard Tren Maya</h3>
-
-                        <p>
-                            Sistema de monitoreo y visualización de información
-                            desarrollado para optimizar el seguimiento de operaciones.
-                        </p>
-
-                        <a href="#" class="project-link">
-                            Ver proyecto →
-                        </a>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>Paquetes Turísticos</h3>
-
-                        <p>
-                            Dashboard para organizar, consultar y visualizar
-                            información relacionada con paquetes turísticos.
-                        </p>
-
-                        <a href="#" class="project-link">
-                            Ver proyecto →
-                        </a>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>Gurubel Web Solutions</h3>
-
-                        <p>
-                            Portafolio y sitio web desarrollado para presentar
-                            servicios, proyectos y soluciones digitales.
-                        </p>
-
-                        <a href="#inicio" class="project-link">
-                            Ver proyecto →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </section>
 
 
-        <!-- CONTACTO -->
+        <!-- LLAMADA A EXPLORAR PROYECTOS -->
+        <section class="projects-cta">
+            <div class="container projects-cta-content">
 
-        <section id="contacto" class="section contact-section">
+                <div>
+                    <p class="eyebrow">DE LA IDEA A LA EXPERIENCIA</p>
 
-            <div class="section-content">
+                    <h2>
+                        Cada proyecto es una oportunidad
+                        <span>para crear algo mejor.</span>
+                    </h2>
 
-                <p class="subtitle">CONTACTO</p>
-
-                <h2>
-                    ¿Tienes un proyecto en mente?
-                </h2>
-
-                <p class="description">
-                    Hablemos sobre cómo podemos convertir tu idea en una
-                    solución digital.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="mailto:tu-correo@ejemplo.com" class="btn-primary">
-                        Enviar correo
-                    </a>
-
-                    <a href="#" class="btn-secondary">
-                        LinkedIn
-                    </a>
-
+                    <p>
+                        Descubre proyectos, experimentos y soluciones
+                        que muestran cómo las ideas pueden convertirse
+                        en experiencias digitales.
+                    </p>
                 </div>
 
-            </div>
+                <a
+                    href="proyectos/index.html"
+                    class="btn btn-primary"
+                >
+                    Explorar proyectos →
+                </a>
 
+            </div>
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <div class="container footer-content">
 
-    <footer>
+            <a href="index.html" class="footer-brand">
+                GWS
+            </a>
 
-        <p>
-            © 2026 Gurubel Web Solutions. Todos los derechos reservados.
-        </p>
+            <p>
+                Desarrollo web, diseño y soluciones digitales.
+            </p>
 
+            <p class="footer-copyright">
+                © <span id="current-year">2026</span>
+                Gurubel Web Solutions. Todos los derechos reservados.
+            </p>
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social"
+            >
+                LinkedIn →
+            </a>
+
+        </div>
     </footer>
 
 
-</body>
+    <script>
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
 
+</body>
 </html>
